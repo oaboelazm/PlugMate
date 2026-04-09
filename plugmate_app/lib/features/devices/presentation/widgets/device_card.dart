@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../domain/models/device.dart';
 import '../../domain/models/plug_socket.dart';
-import 'device_action_button.dart';
-import 'socket_toggle_tile.dart';
 
 class DeviceCard extends StatelessWidget {
   const DeviceCard({
@@ -76,15 +74,40 @@ class DeviceCard extends StatelessWidget {
             const SizedBox(height: 14),
             Row(
               children: [
-                DeviceActionButton(
-                  label: 'Turn All ON',
-                  isPrimary: true,
+                FilledButton(
+                  style: FilledButton.styleFrom(
+                    backgroundColor: AppColors.primary,
+                    foregroundColor: Colors.black,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 12,
+                      vertical: 8,
+                    ),
+                    textStyle: const TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: 0.6,
+                    ),
+                  ),
                   onPressed: onTurnAllOn,
+                  child: const Text('Turn All ON'),
                 ),
                 const SizedBox(width: 8),
-                DeviceActionButton(
-                  label: 'Turn All OFF',
+                FilledButton(
+                  style: FilledButton.styleFrom(
+                    backgroundColor: AppColors.surfaceContainerHigh,
+                    foregroundColor: AppColors.onSurface,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 12,
+                      vertical: 8,
+                    ),
+                    textStyle: const TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: 0.6,
+                    ),
+                  ),
                   onPressed: onTurnAllOff,
+                  child: const Text('Turn All OFF'),
                 ),
               ],
             ),
@@ -92,9 +115,61 @@ class DeviceCard extends StatelessWidget {
             Column(
               children: [
                 for (final socket in device.sockets) ...[
-                  SocketToggleTile(
-                    socket: socket,
-                    onToggle: (_) => onSocketToggle(socket),
+                  AnimatedContainer(
+                    duration: const Duration(milliseconds: 220),
+                    curve: Curves.easeOut,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 12,
+                      vertical: 8,
+                    ),
+                    decoration: BoxDecoration(
+                      color: AppColors.surfaceContainerHigh,
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: socket.isOn
+                            ? AppColors.primary.withValues(alpha: 0.4)
+                            : Colors.transparent,
+                      ),
+                      boxShadow: socket.isOn
+                          ? [
+                              BoxShadow(
+                                color: AppColors.primary.withValues(alpha: 0.18),
+                                blurRadius: 16,
+                                spreadRadius: 1,
+                              ),
+                            ]
+                          : const [],
+                    ),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Text(
+                            socket.name,
+                            style: Theme.of(context).textTheme.bodyMedium,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                        AnimatedDefaultTextStyle(
+                          duration: const Duration(milliseconds: 220),
+                          style: TextStyle(
+                            fontSize: 11,
+                            fontWeight: FontWeight.w700,
+                            letterSpacing: 0.8,
+                            color: socket.isOn
+                                ? AppColors.success
+                                : AppColors.onSurfaceVariant,
+                          ),
+                          child: Text(socket.isOn ? 'ON' : 'OFF'),
+                        ),
+                        const SizedBox(width: 8),
+                        Switch.adaptive(
+                          value: socket.isOn,
+                          activeColor: AppColors.primary,
+                          onChanged: (_) => onSocketToggle(socket),
+                        ),
+                      ],
+                    ),
                   ),
                   if (socket.id != device.sockets.last.id)
                     const SizedBox(height: 8),
