@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../data/repositories/mock_pairing_repository.dart';
 import '../../domain/repositories/pairing_repository.dart';
 
-enum ConnectionStatus { idle, scanning, connecting, connected, failed }
+enum ConnectionStatus { idle, scanning, scanComplete, connecting, connected, failed }
 
 class PairingState {
   const PairingState({
@@ -47,7 +47,7 @@ class PairingController extends StateNotifier<PairingState> {
     try {
       final devices = await _repository.scanDevices();
       state = state.copyWith(
-        status: ConnectionStatus.connected,
+        status: ConnectionStatus.scanComplete,
         discoveredDevices: devices,
       );
     } catch (_) {
