@@ -22,6 +22,7 @@ class DeviceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final statusColor = device.isOnline ? AppColors.success : AppColors.onSurfaceVariant;
+    final lastSocketId = device.sockets.last.id;
 
     return Card(
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -120,8 +121,7 @@ class DeviceCard extends StatelessWidget {
                     socket: socket,
                     onToggle: (_) => onSocketToggle(socket),
                   ),
-                  if (socket.id != device.sockets.last.id)
-                    const SizedBox(height: 8),
+                  if (socket.id != lastSocketId) const SizedBox(height: 8),
                 ],
               ],
             ),
