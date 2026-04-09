@@ -48,7 +48,3 @@ final applySceneProvider = Provider<void Function(Scene)>((ref) {
     }
   };
 });
-
-extension<T> on Iterable<T> {
-  T? get firstOrNull => isEmpty ? null : first;
-}
