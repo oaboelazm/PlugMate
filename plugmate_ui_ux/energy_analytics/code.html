@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "primary": "#c3f5ff",
+                  "surface-container-highest": "#353534",
+                  "on-surface": "#e5e2e1",
+                  "on-surface-variant": "#bac9cc",
+                  "secondary-container": "#6e06d0",
+                  "on-background": "#e5e2e1",
+                  "surface-container-lowest": "#0e0e0e",
+                  "surface-dim": "#131313",
+                  "on-secondary-fixed": "#290055",
+                  "tertiary-fixed": "#50ffb0",
+                  "on-tertiary-container": "#006641",
+                  "secondary-fixed-dim": "#d8b9ff",
+                  "on-primary-container": "#00626e",
+                  "surface-bright": "#393939",
+                  "surface-tint": "#00daf3",
+                  "background": "#131313",
+                  "secondary-fixed": "#eddcff",
+                  "tertiary-fixed-dim": "#1fe296",
+                  "error-container": "#93000a",
+                  "inverse-on-surface": "#313030",
+                  "on-error": "#690005",
+                  "primary-fixed": "#9cf0ff",
+                  "surface": "#131313",
+                  "surface-container": "#201f1f",
+                  "surface-container-low": "#1c1b1b",
+                  "on-tertiary-fixed": "#002112",
+                  "on-tertiary-fixed-variant": "#005233",
+                  "on-tertiary": "#003822",
+                  "on-error-container": "#ffdad6",
+                  "inverse-primary": "#006875",
+                  "inverse-surface": "#e5e2e1",
+                  "outline-variant": "#3b494c",
+                  "tertiary": "#a8ffcd",
+                  "on-secondary-fixed-variant": "#6200bc",
+                  "primary-fixed-dim": "#00daf3",
+                  "primary-container": "#00e5ff",
+                  "error": "#ffb4ab",
+                  "on-primary-fixed-variant": "#004f58",
+                  "on-secondary-container": "#d5b5ff",
+                  "on-primary-fixed": "#001f24",
+                  "secondary": "#d8b9ff",
+                  "on-secondary": "#450086",
+                  "outline": "#849396",
+                  "tertiary-container": "#34ec9f",
+                  "surface-container-high": "#2a2a2a",
+                  "on-primary": "#00363d",
+                  "surface-variant": "#353534"
+          },
+          "borderRadius": {
+                  "DEFAULT": "1rem",
+                  "lg": "2rem",
+                  "xl": "3rem",
+                  "full": "9999px"
+          },
+          "fontFamily": {
+                  "headline": ["Manrope"],
+                  "body": ["Inter"],
+                  "label": ["Inter"]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-card {
+      background: rgba(28, 27, 27, 0.4);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    .chart-gradient {
+      background: linear-gradient(180deg, rgba(0, 229, 255, 0.12) 0%, rgba(0, 229, 255, 0) 100%);
+    }
+    .line-glow {
+      filter: drop-shadow(0px 0px 8px rgba(0, 229, 255, 0.4));
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Shell -->
+<header class="bg-[#131313] w-full top-0 z-50 flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden ring-2 ring-primary/20">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="portrait of a sophisticated man with a warm smile and modern eyeglasses in soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCPrspaktJvOK9Ea_NPT-UZU4Dm3SSZl4IYNZR8320wjF_g642yrmt8AZfUrp2NllQrTYbLLiyYFuo2CBvCkUcilKtxHZZlqAIiwnzMYgGDj4M73kKPSxL1opfKOmQl3wdha8iFJxSLeX9LK82uZtoQ33ggFX-G0keQAbx7SOjbVO1SHc1HWMxXQD8D6DPQ0EdcMOQBZMQW35lZjkewpVwnXFxruCTca4M5fnxYNC3lj1tMfnKz6hrlxreUMC2jxoCmoHQb4AZ4V_6"/>
+</div>
+<span class="font-['Manrope'] headline-md tracking-tight text-xl font-bold text-[#c3f5ff]">PlugMate</span>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-[#2a2a2a] transition-colors duration-300 Active: scale-95 transition-transform cubic-bezier(0.4,0,0.2,1)">
+<span class="material-symbols-outlined text-[#c3f5ff]" data-icon="add">add</span>
+</button>
+</header>
+<main class="pb-32 pt-4 px-6 max-w-5xl mx-auto">
+<!-- Editorial Header Section -->
+<section class="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h1 class="font-headline text-4xl font-extrabold tracking-tight text-primary">Energy Insights.</h1>
+<p class="text-on-surface-variant font-medium mt-2">Environment performance &amp; real-time load.</p>
+</div>
+<div class="flex gap-2">
+<div class="bg-surface-container-high px-4 py-2 rounded-full text-xs font-semibold tracking-widest uppercase text-on-surface-variant ring-1 ring-outline-variant/10">Weekly View</div>
+<div class="bg-secondary-container/20 text-on-secondary-container px-4 py-2 rounded-full text-xs font-semibold tracking-widest uppercase">Live Pulse</div>
+</div>
+</section>
+<!-- Main Analytics Bento -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Chart Card -->
+<div class="md:col-span-2 bg-surface-container-low rounded-lg p-8 relative overflow-hidden flex flex-col gap-8">
+<div class="flex justify-between items-start z-10">
+<div>
+<p class="text-xs font-label uppercase tracking-widest text-on-surface-variant mb-1">Consumption Trend</p>
+<div class="flex items-baseline gap-2">
+<span class="font-headline text-5xl font-bold text-on-surface">142.8</span>
+<span class="text-primary font-medium">kWh</span>
+</div>
+</div>
+<div class="text-right">
+<span class="text-tertiary font-bold text-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="trending_down">trending_down</span>
+              12% VS LAST WEEK
+            </span>
+</div>
+</div>
+<!-- Custom Glowing Line Chart Visualizer -->
+<div class="h-64 w-full relative mt-auto">
+<svg class="w-full h-full line-glow" preserveaspectratio="none" viewbox="0 0 400 150">
+<path d="M0,130 C40,120 60,140 100,100 C140,60 180,90 220,50 C260,10 320,40 400,20" fill="none" stroke="url(#lineGradient)" stroke-linecap="round" stroke-width="4"></path>
+<path d="M0,130 C40,120 60,140 100,100 C140,60 180,90 220,50 C260,10 320,40 400,20 V150 H0 Z" fill="url(#areaGradient)" opacity="0.3"></path>
+<defs>
+<lineargradient id="lineGradient" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" style="stop-color:#00e5ff;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#d8b9ff;stop-opacity:1"></stop>
+</lineargradient>
+<lineargradient id="areaGradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#00e5ff;stop-opacity:0.4"></stop>
+<stop offset="100%" style="stop-color:#00e5ff;stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div class="absolute bottom-0 left-0 w-full flex justify-between text-[10px] font-label text-on-surface-variant uppercase tracking-tighter mt-4 pt-4 border-t border-outline-variant/10">
+<span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+</div>
+</div>
+</div>
+<!-- Side Summary Cards -->
+<div class="flex flex-col gap-6">
+<!-- Today Card -->
+<div class="bg-surface-container-high rounded-lg p-6 flex flex-col justify-between h-full ring-1 ring-outline-variant/15">
+<div class="flex justify-between items-start">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="bolt">bolt</span>
+</div>
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-widest">Today</span>
+</div>
+<div>
+<h3 class="text-on-surface-variant text-sm font-medium">Total Today</h3>
+<p class="font-headline text-3xl font-bold mt-1">12.4 <span class="text-base font-medium text-on-surface-variant">kWh</span></p>
+</div>
+</div>
+<!-- Cost Card -->
+<div class="bg-surface-container-high rounded-lg p-6 flex flex-col justify-between h-full ring-1 ring-outline-variant/15">
+<div class="flex justify-between items-start">
+<div class="w-10 h-10 rounded-full bg-tertiary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" data-icon="payments">payments</span>
+</div>
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-widest">Forecast</span>
+</div>
+<div>
+<h3 class="text-on-surface-variant text-sm font-medium">Est. Monthly Cost</h3>
+<p class="font-headline text-3xl font-bold mt-1">$42.15</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Socket Breakdown Section -->
+<section class="mt-12">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-headline text-xl font-bold">Top Consuming Sockets</h2>
+<button class="text-primary text-xs font-bold tracking-widest uppercase hover:underline">View All</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Socket Item 1 -->
+<div class="bg-surface-container-low p-5 rounded-lg flex items-center justify-between group hover:bg-surface-container-high transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-highest flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary" data-icon="desktop_windows">desktop_windows</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface">Home Office Desk</h4>
+<p class="text-xs text-on-surface-variant font-label uppercase tracking-widest">Active • 420W</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-headline text-lg font-bold">32%</p>
+<div class="w-20 h-1 bg-surface-container-highest rounded-full mt-1 overflow-hidden">
+<div class="h-full bg-primary w-[32%]"></div>
+</div>
+</div>
+</div>
+<!-- Socket Item 2 -->
+<div class="bg-surface-container-low p-5 rounded-lg flex items-center justify-between group hover:bg-surface-container-high transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-highest flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary" data-icon="kitchen">kitchen</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface">Kitchen Main Refrig</h4>
+<p class="text-xs text-on-surface-variant font-label uppercase tracking-widest">Active • 150W</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-headline text-lg font-bold">24%</p>
+<div class="w-20 h-1 bg-surface-container-highest rounded-full mt-1 overflow-hidden">
+<div class="h-full bg-secondary w-[24%]"></div>
+</div>
+</div>
+</div>
+<!-- Socket Item 3 -->
+<div class="bg-surface-container-low p-5 rounded-lg flex items-center justify-between group hover:bg-surface-container-high transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-highest flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-tertiary" data-icon="air_conditioner">ac_unit</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface">Living Room HVAC</h4>
+<p class="text-xs text-on-surface-variant font-label uppercase tracking-widest">Standby • 12W</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-headline text-lg font-bold">18%</p>
+<div class="w-20 h-1 bg-surface-container-highest rounded-full mt-1 overflow-hidden">
+<div class="h-full bg-tertiary w-[18%]"></div>
+</div>
+</div>
+</div>
+<!-- Socket Item 4 -->
+<div class="bg-surface-container-low p-5 rounded-lg flex items-center justify-between group hover:bg-surface-container-high transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-highest flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary-fixed-dim" data-icon="ev_station">ev_station</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface">EV Charger Port</h4>
+<p class="text-xs text-on-surface-variant font-label uppercase tracking-widest">Offline • 0W</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-headline text-lg font-bold">15%</p>
+<div class="w-20 h-1 bg-surface-container-highest rounded-full mt-1 overflow-hidden">
+<div class="h-full bg-primary-fixed-dim w-[15%]"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center pt-3 pb-8 px-4 bg-[#131313]/80 backdrop-blur-xl z-50 rounded-t-[32px] shadow-[0px_-4px_40px_rgba(0,218,243,0.06)]">
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 px-5 py-2 hover:text-[#c3f5ff] transition-all Active: scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 px-5 py-2 hover:text-[#c3f5ff] transition-all Active: scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest mt-1">Scenes</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#00e5ff]/10 text-[#00e5ff] rounded-full px-5 py-2 ring-1 ring-[#00e5ff]/20 Active: scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest mt-1">Energy</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 px-5 py-2 hover:text-[#c3f5ff] transition-all Active: scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest mt-1">Alerts</span>
+</a>
+</nav>
+</body></html>

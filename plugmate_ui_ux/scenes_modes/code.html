@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#c3f5ff",
+                    "surface-container-highest": "#353534",
+                    "on-surface": "#e5e2e1",
+                    "on-surface-variant": "#bac9cc",
+                    "secondary-container": "#6e06d0",
+                    "on-background": "#e5e2e1",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-dim": "#131313",
+                    "on-secondary-fixed": "#290055",
+                    "tertiary-fixed": "#50ffb0",
+                    "on-tertiary-container": "#006641",
+                    "secondary-fixed-dim": "#d8b9ff",
+                    "on-primary-container": "#00626e",
+                    "surface-bright": "#393939",
+                    "surface-tint": "#00daf3",
+                    "background": "#131313",
+                    "secondary-fixed": "#eddcff",
+                    "tertiary-fixed-dim": "#1fe296",
+                    "error-container": "#93000a",
+                    "inverse-on-surface": "#313030",
+                    "on-error": "#690005",
+                    "primary-fixed": "#9cf0ff",
+                    "surface": "#131313",
+                    "surface-container": "#201f1f",
+                    "surface-container-low": "#1c1b1b",
+                    "on-tertiary-fixed": "#002112",
+                    "on-tertiary-fixed-variant": "#005233",
+                    "on-tertiary": "#003822",
+                    "on-error-container": "#ffdad6",
+                    "inverse-primary": "#006875",
+                    "inverse-surface": "#e5e2e1",
+                    "outline-variant": "#3b494c",
+                    "tertiary": "#a8ffcd",
+                    "on-secondary-fixed-variant": "#6200bc",
+                    "primary-fixed-dim": "#00daf3",
+                    "primary-container": "#00e5ff",
+                    "error": "#ffb4ab",
+                    "on-primary-fixed-variant": "#004f58",
+                    "on-secondary-container": "#d5b5ff",
+                    "on-primary-fixed": "#001f24",
+                    "secondary": "#d8b9ff",
+                    "on-secondary": "#450086",
+                    "outline": "#849396",
+                    "tertiary-container": "#34ec9f",
+                    "surface-container-high": "#2a2a2a",
+                    "on-primary": "#00363d",
+                    "surface-variant": "#353534"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(42, 42, 42, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-[#131313] w-full top-0 z-50 flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden ring-2 ring-primary/20">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="close-up portrait of a professional man with glasses in minimalist studio lighting with a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOuOM0QTI5GWEQrXYhPpZmGnLOmNigZzyMcYPD3sXKR6togNnOfXCvRCJO-gDJFcSei88u6qdQudoeTqateR20kpR-_sXUkAw5AU36T-DSZESaunoAdEwOJD5eJFCeYeoiGFBHJpNeK11zGuxsypAI6oxwLRLIP7Rgz8FS7H8__GNd3t-yBHz1eYC-_1mTeoHTG_hHYHZkm5dRd4Ia0SOWo8pyVQ3S7ZW83BmwUSUZZ6XAbBRNZZbcoPBnMdtch64rCB-Nxs6OG5P7"/>
+</div>
+<h1 class="font-['Manrope'] headline-md tracking-tight text-[#c3f5ff] text-xl font-bold">PlugMate</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-[#2a2a2a] transition-colors duration-300 text-[#c3f5ff] Active: scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</header>
+<main class="px-6 pt-8 max-w-5xl mx-auto">
+<!-- Header Section -->
+<div class="flex justify-between items-end mb-10">
+<div>
+<p class="text-primary-fixed-dim font-label text-[10px] uppercase tracking-[0.2em] mb-2">Atmosphere Control</p>
+<h2 class="font-headline text-4xl font-extrabold tracking-tight text-on-surface">My Scenes</h2>
+</div>
+<div class="hidden md:flex gap-4">
+<div class="flex flex-col items-end">
+<span class="text-on-surface-variant text-xs font-label">Active Environment</span>
+<span class="text-tertiary font-bold">Productive Focus</span>
+</div>
+</div>
+</div>
+<!-- Bento Grid for Scenes -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Scene Card: Sleep -->
+<div class="relative group cursor-pointer">
+<div class="absolute inset-0 bg-gradient-to-br from-secondary-container/20 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="glass-card p-8 rounded-lg flex flex-col justify-between min-h-[220px] transition-all duration-300 hover:translate-y-[-4px]">
+<div class="flex justify-between items-start">
+<div class="p-4 rounded-2xl bg-surface-container-high text-secondary shadow-lg">
+<span class="material-symbols-outlined text-3xl" data-icon="dark_mode">dark_mode</span>
+</div>
+<div class="px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant text-[10px] font-label tracking-widest uppercase">Inactive</div>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-2">Sleep</h3>
+<p class="text-on-surface-variant text-sm font-body">8 Sockets across 4 Devices</p>
+</div>
+</div>
+</div>
+<!-- Scene Card: Gaming (Active) -->
+<div class="relative group cursor-pointer">
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container/20 to-transparent rounded-lg opacity-100 transition-opacity duration-500"></div>
+<div class="bg-surface-container-high p-8 rounded-lg border-t border-primary/20 flex flex-col justify-between min-h-[220px] shadow-[0px_20px_40px_rgba(0,229,255,0.08)]">
+<div class="flex justify-between items-start">
+<div class="p-4 rounded-2xl bg-primary-container text-on-primary-container shadow-[0_0_20px_rgba(0,229,255,0.4)]">
+<span class="material-symbols-outlined text-3xl" data-icon="sports_esports">sports_esports</span>
+</div>
+<div class="px-3 py-1 rounded-full bg-primary-container/10 text-primary text-[10px] font-label tracking-widest uppercase ring-1 ring-primary/30">Active</div>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-2">Gaming</h3>
+<p class="text-on-surface-variant text-sm font-body">12 Sockets across 5 Devices</p>
+</div>
+</div>
+</div>
+<!-- Scene Card: Movie Night -->
+<div class="relative group cursor-pointer">
+<div class="absolute inset-0 bg-gradient-to-br from-tertiary-fixed-dim/10 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="glass-card p-8 rounded-lg flex flex-col justify-between min-h-[220px] transition-all duration-300 hover:translate-y-[-4px]">
+<div class="flex justify-between items-start">
+<div class="p-4 rounded-2xl bg-surface-container-high text-tertiary shadow-lg">
+<span class="material-symbols-outlined text-3xl" data-icon="theaters">theaters</span>
+</div>
+<div class="px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant text-[10px] font-label tracking-widest uppercase">Inactive</div>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-2">Movie Night</h3>
+<p class="text-on-surface-variant text-sm font-body">6 Sockets across 2 Devices</p>
+</div>
+</div>
+</div>
+<!-- Scene Card: Morning Routine -->
+<div class="relative group cursor-pointer lg:col-span-2">
+<div class="absolute inset-0 bg-gradient-to-r from-secondary/10 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="glass-card p-8 rounded-lg flex md:flex-row flex-col items-center justify-between min-h-[160px] transition-all duration-300 hover:translate-y-[-4px]">
+<div class="flex items-center gap-6">
+<div class="p-4 rounded-2xl bg-surface-container-high text-secondary shadow-lg">
+<span class="material-symbols-outlined text-3xl" data-icon="wb_sunny">wb_sunny</span>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-1">Morning Routine</h3>
+<p class="text-on-surface-variant text-sm font-body">4 Sockets across 3 Devices</p>
+</div>
+</div>
+<div class="mt-4 md:mt-0 flex gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="coffee">coffee</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="light">light</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Scene Card: Focus -->
+<div class="relative group cursor-pointer">
+<div class="absolute inset-0 bg-gradient-to-br from-on-surface-variant/10 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="glass-card p-8 rounded-lg flex flex-col justify-between min-h-[220px] transition-all duration-300 hover:translate-y-[-4px]">
+<div class="flex justify-between items-start">
+<div class="p-4 rounded-2xl bg-surface-container-high text-on-surface-variant shadow-lg">
+<span class="material-symbols-outlined text-3xl" data-icon="center_focus_strong">center_focus_strong</span>
+</div>
+<div class="px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant text-[10px] font-label tracking-widest uppercase">Inactive</div>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-2">Focus</h3>
+<p class="text-on-surface-variant text-sm font-body">3 Sockets across 1 Device</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Featured Section: Automated Modes -->
+<div class="mt-16 mb-8">
+<h3 class="font-headline text-xl font-bold text-on-surface mb-6">Suggested Automation</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-6 rounded-lg flex items-center gap-4">
+<img alt="Home Entrance" class="w-20 h-20 rounded-lg object-cover" data-alt="cinematic interior wide shot of a modern dark luxury apartment hallway with soft blue accent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9P0dyXeos9R5wrwG-iQPpeeWTJbI-E7sQYQZlswQkLWgjqLSFY2yhN31MdaE7oYXkELz2xDLnjl2d4zz75-EKawlAWGLCrECBVvhElZUykDOCozsbifiWFBZgHpjpBK_0IkFERlwtq1rxk8QZV6TnQRAmk5Wzdc1F7fQSUiF2ngsYezqxoNodz4RJWPQ8nJfPnq-1pRmdBV75HyfheQ1gYfvIrbsKozYXS92dCBKbuwNQoNxiD1w4I8mQrrTPwE0rfJP1x-cuaiHZ"/>
+<div>
+<h4 class="font-bold text-on-surface">Arriving Home</h4>
+<p class="text-sm text-on-surface-variant">Activate based on Geofencing</p>
+</div>
+<button class="ml-auto text-primary p-2">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<div class="bg-surface-container-low p-6 rounded-lg flex items-center gap-4">
+<img alt="Office" class="w-20 h-20 rounded-lg object-cover" data-alt="minimalist workstation with a sleek monitor and mechanical keyboard in a dark moody room with emerald green backlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ0FB74QYi6CGFVTNjcBQwDXxsO6ZyXkbib1S0ISHT3Hs_SWpkB71xdW47pFZoJZX-yt_N9pUFzypU0jJy3bLKX5hrPVRkTryZCp4AH-pzqkmlIX3Emtuc6K5od_ycOYTAiRdPt9Mg0UIcbFSNnkRI0DyEu17XT5t06l_DSK2gYGb3tOOnM-JcvVEM3l4S--d658WI3fUu97-A4-H0EE7kPv1crV34Didlw6DVjpQjYcVIAx9xE0fmABlqnIc_M7WjtJhAe9aXa6oi"/>
+<div>
+<h4 class="font-bold text-on-surface">Work Hours</h4>
+<p class="text-sm text-on-surface-variant">Scheduled: 09:00 - 18:00</p>
+</div>
+<button class="ml-auto text-primary p-2">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Create New Scene FAB -->
+<button class="fixed bottom-28 right-6 bg-gradient-to-br from-primary to-primary-container text-on-primary-container px-6 py-4 rounded-full flex items-center gap-3 shadow-[0_12px_24px_rgba(0,229,255,0.3)] hover:scale-105 active:scale-95 transition-all duration-300 z-50">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="font-bold font-headline tracking-wide uppercase text-xs">Create New Scene</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center pt-3 pb-8 px-4 bg-[#131313]/80 backdrop-blur-xl z-50 rounded-t-[32px] shadow-[0px_-4px_40px_rgba(0,218,243,0.06)]">
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 px-5 py-2 hover:text-[#c3f5ff] transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="dashboard">dashboard</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#00e5ff]/10 text-[#00e5ff] rounded-full px-5 py-2 ring-1 ring-[#00e5ff]/20" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="palette" style="font-variation-settings: 'FILL' 1;">palette</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest">Scenes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 px-5 py-2 hover:text-[#c3f5ff] transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="bolt">bolt</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest">Energy</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 px-5 py-2 hover:text-[#c3f5ff] transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="notifications">notifications</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest">Alerts</span>
+</a>
+</nav>
+</body></html>

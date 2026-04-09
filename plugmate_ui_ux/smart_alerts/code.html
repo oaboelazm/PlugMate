@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#c3f5ff",
+                        "surface-container-highest": "#353534",
+                        "on-surface": "#e5e2e1",
+                        "on-surface-variant": "#bac9cc",
+                        "secondary-container": "#6e06d0",
+                        "on-background": "#e5e2e1",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-dim": "#131313",
+                        "on-secondary-fixed": "#290055",
+                        "tertiary-fixed": "#50ffb0",
+                        "on-tertiary-container": "#006641",
+                        "secondary-fixed-dim": "#d8b9ff",
+                        "on-primary-container": "#00626e",
+                        "surface-bright": "#393939",
+                        "surface-tint": "#00daf3",
+                        "background": "#131313",
+                        "secondary-fixed": "#eddcff",
+                        "tertiary-fixed-dim": "#1fe296",
+                        "error-container": "#93000a",
+                        "inverse-on-surface": "#313030",
+                        "on-error": "#690005",
+                        "primary-fixed": "#9cf0ff",
+                        "surface": "#131313",
+                        "surface-container": "#201f1f",
+                        "surface-container-low": "#1c1b1b",
+                        "on-tertiary-fixed": "#002112",
+                        "on-tertiary-fixed-variant": "#005233",
+                        "on-tertiary": "#003822",
+                        "on-error-container": "#ffdad6",
+                        "inverse-primary": "#006875",
+                        "inverse-surface": "#e5e2e1",
+                        "outline-variant": "#3b494c",
+                        "tertiary": "#a8ffcd",
+                        "on-secondary-fixed-variant": "#6200bc",
+                        "primary-fixed-dim": "#00daf3",
+                        "primary-container": "#00e5ff",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed-variant": "#004f58",
+                        "on-secondary-container": "#d5b5ff",
+                        "on-primary-fixed": "#001f24",
+                        "secondary": "#d8b9ff",
+                        "on-secondary": "#450086",
+                        "outline": "#849396",
+                        "tertiary-container": "#34ec9f",
+                        "surface-container-high": "#2a2a2a",
+                        "on-primary": "#00363d",
+                        "surface-variant": "#353534"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(28, 27, 27, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-[#131313] dark:bg-[#131313] w-full top-0 z-50 flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high ring-2 ring-primary/20">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="close-up portrait of a professional man in a tech environment, soft blue ambient light, modern studio photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3ujivMQJuuoFY-Qf9Rl9UuOEjgnVOXIQtZeQj77aGit9cMXlLlUSdATcmA2RVxdgu1kMoepHD7JxEEIEQN2KgcfhrVXvRQN9E12Mk-Fn3A7oYdbjaJhn7GFAqdzZ4uVup8cKxQmj4D3pDlo88repl7Q_apkZBBaK-UMLsorpHEYHYE7eAgu-bCmetY-Z9EV_wiacP598XuHDG9pIDao5_m23R2YtBHVII0xXD1rIdY43ATnMOC4KRCsSu5AocPdOYpzHPXrKbytGq"/>
+</div>
+<h1 class="font-['Manrope'] headline-md tracking-tight text-[#c3f5ff] dark:text-[#c3f5ff] text-xl font-bold">Notifications</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full text-[#c3f5ff] hover:bg-[#2a2a2a] transition-colors duration-300 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</header>
+<main class="pb-32 px-6 pt-4 max-w-2xl mx-auto">
+<!-- Alerts Feed Section -->
+<div class="space-y-4">
+<!-- Alert: Device Left ON -->
+<div class="group relative overflow-hidden rounded-lg bg-surface-container-low transition-all duration-300 hover:bg-surface-container-high">
+<div class="flex items-start gap-4 p-5">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400 ring-1 ring-orange-500/20">
+<span class="material-symbols-outlined" data-icon="warning" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<p class="font-headline font-bold text-on-surface tracking-tight">Device Left ON</p>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-medium">2m ago</span>
+</div>
+<p class="text-body-md text-on-surface-variant leading-relaxed">Iron Strip has been ON for 2 hours. Consider turning it off to save energy.</p>
+<div class="mt-4 flex gap-2">
+<button class="px-4 py-2 bg-primary text-on-primary text-xs font-bold rounded-full hover:bg-primary-fixed transition-colors">Turn Off</button>
+<button class="px-4 py-2 bg-surface-container-highest text-on-surface text-xs font-medium rounded-full hover:bg-surface-bright transition-colors">Dismiss</button>
+</div>
+</div>
+</div>
+<!-- Swipe simulation indicator -->
+<div class="absolute right-0 top-0 bottom-0 w-1 bg-orange-500/40"></div>
+</div>
+<!-- Alert: Connection Lost -->
+<div class="group relative overflow-hidden rounded-lg bg-surface-container-low transition-all duration-300 hover:bg-surface-container-high">
+<div class="flex items-start gap-4 p-5">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-error/10 flex items-center justify-center text-error ring-1 ring-error/20">
+<span class="material-symbols-outlined" data-icon="cloud_off">cloud_off</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<p class="font-headline font-bold text-on-surface tracking-tight">Connection Lost</p>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-medium">15m ago</span>
+</div>
+<p class="text-body-md text-on-surface-variant leading-relaxed">Living Room Strip offline. Check your router or power supply.</p>
+<div class="mt-4 flex gap-2">
+<button class="px-4 py-2 bg-surface-container-highest text-on-surface text-xs font-medium rounded-full hover:bg-surface-bright transition-colors">Troubleshoot</button>
+</div>
+</div>
+</div>
+<div class="absolute right-0 top-0 bottom-0 w-1 bg-error/40"></div>
+</div>
+<!-- Info: Firmware Update -->
+<div class="group relative overflow-hidden rounded-lg bg-surface-container-low transition-all duration-300 hover:bg-surface-container-high">
+<div class="flex items-start gap-4 p-5">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary ring-1 ring-primary/20">
+<span class="material-symbols-outlined" data-icon="system_update">system_update</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<p class="font-headline font-bold text-on-surface tracking-tight">Firmware Update Available</p>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-medium">1h ago</span>
+</div>
+<p class="text-body-md text-on-surface-variant leading-relaxed">New features and stability improvements for PlugMate Hub v2.1.</p>
+<div class="mt-4 flex gap-2">
+<button class="px-4 py-2 bg-primary-container text-on-primary-container text-xs font-bold rounded-full hover:bg-primary-fixed transition-colors">Install Now</button>
+</div>
+</div>
+</div>
+<div class="absolute right-0 top-0 bottom-0 w-1 bg-primary/40"></div>
+</div>
+<!-- Yesterday Section Divider -->
+<div class="pt-6 pb-2">
+<h2 class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/60 font-bold">Yesterday</h2>
+</div>
+<!-- Energy Report -->
+<div class="group relative overflow-hidden rounded-lg bg-surface-container-low transition-all duration-300 hover:bg-surface-container-high opacity-80 hover:opacity-100">
+<div class="flex items-start gap-4 p-5">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary ring-1 ring-tertiary/20">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<p class="font-headline font-bold text-on-surface tracking-tight">Daily Energy Report</p>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-medium">24h ago</span>
+</div>
+<p class="text-body-md text-on-surface-variant leading-relaxed">You saved 12% more energy than last Wednesday. Great job!</p>
+</div>
+</div>
+</div>
+<!-- System Message -->
+<div class="group relative overflow-hidden rounded-lg bg-surface-container-low transition-all duration-300 hover:bg-surface-container-high opacity-80 hover:opacity-100">
+<div class="flex items-start gap-4 p-5">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary ring-1 ring-secondary/20">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<p class="font-headline font-bold text-on-surface tracking-tight">New Scene Created</p>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-medium">1d ago</span>
+</div>
+<p class="text-body-md text-on-surface-variant leading-relaxed">"Midnight Movie" was successfully synced to all Living Room devices.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State Visual (Hidden by default, shown if no alerts) -->
+<div class="hidden flex-col items-center justify-center py-20 text-center">
+<div class="w-24 h-24 rounded-full bg-surface-container-high flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-4xl text-on-surface-variant/40" data-icon="notifications_off">notifications_off</span>
+</div>
+<h3 class="text-xl font-headline font-bold mb-2">All Caught Up</h3>
+<p class="text-on-surface-variant max-w-xs mx-auto">No new notifications. Everything in your home is running smoothly.</p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center pt-3 pb-8 px-4 bg-[#131313]/80 backdrop-blur-xl z-50 rounded-t-[32px] shadow-[0px_-4px_40px_rgba(0,218,243,0.06)]">
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 px-5 py-2 hover:text-[#c3f5ff] transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="dashboard">dashboard</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 px-5 py-2 hover:text-[#c3f5ff] transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="palette">palette</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest">Scenes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 px-5 py-2 hover:text-[#c3f5ff] transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="bolt">bolt</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest">Energy</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#00e5ff]/10 text-[#00e5ff] rounded-full px-5 py-2 ring-1 ring-[#00e5ff]/20 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="notifications" style="font-variation-settings: 'FILL' 1;">notifications</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-widest">Alerts</span>
+</a>
+</nav>
+</body></html>
