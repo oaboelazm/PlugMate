@@ -4,19 +4,19 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 class AsyncValueView<T> extends StatelessWidget {
   const AsyncValueView({
     required this.value,
-    required this.data,
+    required this.builder,
     super.key,
   });
 
   final AsyncValue<T> value;
-  final Widget Function(T data) data;
+  final Widget Function(T data) builder;
 
   @override
   Widget build(BuildContext context) {
     return value.when(
       loading: () => const Center(child: CircularProgressIndicator()),
       error: (error, _) => Center(child: Text('Error: $error')),
-      data: data,
+      data: builder,
     );
   }
 }

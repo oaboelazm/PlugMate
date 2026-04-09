@@ -11,13 +11,13 @@ class ScenesScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final scenes = ref.watch(scenesControllerProvider);
-    final applyScene = ref.watch(applySceneProvider);
+    final applyScene = ref.watch(applySceneCallbackProvider);
 
     return Scaffold(
       appBar: AppBar(title: const Text('Scenes')),
       body: AsyncValueView(
         value: scenes,
-        data: (items) => ListView.builder(
+        builder: (items) => ListView.builder(
           itemCount: items.length,
           itemBuilder: (context, index) {
             final scene = items[index];

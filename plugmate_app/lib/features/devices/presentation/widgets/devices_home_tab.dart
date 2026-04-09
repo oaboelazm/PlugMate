@@ -26,7 +26,7 @@ class DevicesHomeTab extends StatelessWidget {
       appBar: AppBar(title: const Text('PlugMate')),
       body: AsyncValueView<List<Device>>(
         value: devices,
-        data: (items) => ListView.builder(
+        builder: (items) => ListView.builder(
           padding: const EdgeInsets.only(top: 8, bottom: 24),
           itemCount: items.length,
           itemBuilder: (context, index) {

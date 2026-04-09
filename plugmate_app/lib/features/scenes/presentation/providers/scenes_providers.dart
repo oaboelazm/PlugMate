@@ -26,7 +26,7 @@ class ScenesController extends StateNotifier<AsyncValue<List<Scene>>> {
   }
 }
 
-final applySceneProvider = Provider<void Function(Scene)>((ref) {
+final applySceneCallbackProvider = Provider<void Function(Scene)>((ref) {
   return (scene) {
     final deviceController = ref.read(deviceControllerProvider.notifier);
 
