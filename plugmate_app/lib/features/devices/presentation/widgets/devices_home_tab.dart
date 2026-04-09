@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/presentation/widgets/async_value_view.dart';
 import '../../domain/models/device.dart';
 import '../../domain/models/plug_socket.dart';
 import 'device_card.dart';
@@ -23,9 +24,8 @@ class DevicesHomeTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('PlugMate')),
-      body: devices.when(
-        loading: () => const Center(child: CircularProgressIndicator()),
-        error: (error, _) => Center(child: Text('Error: $error')),
+      body: AsyncValueView<List<Device>>(
+        value: devices,
         data: (items) => ListView.builder(
           padding: const EdgeInsets.only(top: 8, bottom: 24),
           itemCount: items.length,

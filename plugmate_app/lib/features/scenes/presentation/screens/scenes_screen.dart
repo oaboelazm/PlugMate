@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../core/presentation/widgets/async_value_view.dart';
 import '../providers/scenes_providers.dart';
+import '../widgets/scene_list_tile.dart';
 
 class ScenesScreen extends ConsumerWidget {
   const ScenesScreen({super.key});
@@ -13,20 +15,15 @@ class ScenesScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(title: const Text('Scenes')),
-      body: scenes.when(
-        loading: () => const Center(child: CircularProgressIndicator()),
-        error: (error, _) => Center(child: Text('Error: $error')),
+      body: AsyncValueView(
+        value: scenes,
         data: (items) => ListView.builder(
           itemCount: items.length,
           itemBuilder: (context, index) {
             final scene = items[index];
-            return ListTile(
-              title: Text(scene.name),
-              subtitle: Text('${scene.actions.length} actions'),
-              trailing: FilledButton(
-                onPressed: () => applyScene(scene),
-                child: const Text('Apply'),
-              ),
+            return SceneListTile(
+              scene: scene,
+              onApply: () => applyScene(scene),
             );
           },
         ),
